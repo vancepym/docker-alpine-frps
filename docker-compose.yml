@@ -1,0 +1,12 @@
+services:
+  alpine-frps:
+    restart: unless-stopped
+    image: vancepym/alpine-frps
+    container_name: frps
+    network_mode: host
+    privileged: true
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "10"
